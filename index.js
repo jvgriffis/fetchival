@@ -26,7 +26,7 @@
     }
 
     if (data) {
-        opts.body = JSON.stringify(data);
+        opts.body = data instanceof FormData ? data : JSON.stringify(data);
     } else {
         delete opts.body;
     }
